@@ -335,7 +335,7 @@ div#comparison1 {
   max-height: 600px;
   overflow: hidden; }
  /* Before image (Right) */
-div#comparison figure { 
+div#comparison1 figure { 
   background-image: url(https://pbs.twimg.com/profile_images/2478399688/6gyep59fumb340ima588_400x400.png); 
   background-size: cover;
   position: relative;
@@ -344,12 +344,12 @@ div#comparison figure {
   height: 100%;
   margin: 0; 
 }
-div#comparison figure > img { 
+div#comparison1 figure > img { 
   position: relative;
   width: 100%;
 }
  /* After image (left) */
-div#comparison figure div { 
+div#comparison1 figure div { 
   background-image: url(http://www.drodd.com/images15/2-23.jpg);
   background-size: cover;
   position: absolute;
