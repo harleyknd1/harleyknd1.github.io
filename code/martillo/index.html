@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Martillo DOS Edition</title>
+    <meta name="author" content="Nry_Chan"/>
+    <meta name="Description" content="Martillo's Lovely DOS website"/>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href=""/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.mousewheel-min.js"></script>
+    <script src="../js/jquery.terminal-min.js"></script>
+    <link href="../css/jquery.terminal.css" rel="stylesheet"/>
+  </head>
+<body>
+
+<script>
+jQuery(document).ready(function($) {
+    var id = 1;
+	var DELAY = 67;
+	var anim = false;
+	var temmieFlakes = 0;
+
+
+    $('body').terminal(function(command, term, delay) {
+        switch (command)
+		case('help') 
+            term.echo("available commands are about, nry_chan, store, orders, telephone_number, gallery, livestream and contact");
+        case('test')
+            term.push(function(command, term) {
+                if (command == 'help') {
+                    term.echo('if you type ping it will display pong');
+                } else if (command == 'ping') {
+                    term.echo('pong');
+                } else {
+                    term.echo('unknown command ' + command);
+                }
+            }, {
+                prompt: 'test> ',
+                name: 'test'});
+        case("about") {
+			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
+			term.echo("|In 2010 I started creating leather gear for Live Action Role Play.                                             |");
+			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }	
+			term.echo("|That has evolved into Martillo Workshop and the Twitch.tv/ThatDanishGuy channel where I broadcast my craft.    |");
+			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
+			term.echo("|                                                                                                               |");
+			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
+			term.echo("|I no longer only create LARP gear, but a variety of leather goods through custom projects.                     |");
+			setTimeout(function() { foobar_cont(el); }, 5000);
+			term.echo("|                                                                                                               |");
+			setTimeout(function() { foobar_cont(el); }, 5000);
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        case('nry_chan') {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("|About:                                                                                                         |");
+			term.echo("|                                                                                                               |");
+			term.echo("|A mystical creature that roams the internet, occasionally found on martillo's twitch channle.                  |");
+			term.echo("|Can be lured using slices of pizza or other kinds of food, but can be very fierce when it has not consumed     |");
+			term.echo("|Enough Coffee.                                                                                                 |");
+			term.echo("|                                                                                                               |");
+			term.echo("|Appearances:                                                                                                   |");
+			term.echo("|                                                                                                               |");
+			term.echo("|Appears with pink hair and fluffy cat ears, it also has a fluffy fox tail that can heat up.                    |");
+			term.echo("|                                                                                                               |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        } 
+		case("store") {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("|The store is available here:                                                                                   |");
+			term.echo("|http://bit.ly/MartilloStore                                                                                    |");
+			term.echo("|                                                                                                               |");
+			term.echo("|                                                                                                               |");
+			term.echo("|                                                                                                               |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        }
+		case("orders") {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("| _____       _                               _____ _               _                                           |");
+			term.echo("||     |___ _| |___ ___ ___    ___ ___ ___   |     | |___ ___ ___ _| |                                          |");
+			term.echo("||  |  |  _| . | -_|  _|_ -|  | .'|  _| -_|  |   --| | . |_ -| -_| . |_                                         |");
+			term.echo("||_____|_| |___|___|_| |___|  |__,|_| |___|  |_____|_|___|___|___|___|_|                                        |");
+			term.echo("|                                                                                                               |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        }
+		case("telephone_number") {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("| > Texting That danish guy with your current location Please wait.....                                         |");
+			term.echo("| > Could not detect current location....                                                                       |");
+			term.echo("| > Initiatating failback sequence....                                                                          |");
+			term.echo("| > Banning user on twitch based on IP...                                                                       |");
+			term.echo("| > Ban sucsessfull. https://i1.sndcdn.com/artworks-000130132034-i9wr73-t500x500.jpg                            |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        }
+		case("gallery") {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("| > Did you really think this would've worked?                                                                  |");
+			term.echo("| > I mean, you could be as cool as nry_chan if you wore his outfit everyday... he only takes it off if he...   |");
+			term.echo("| > ...Really needs to.                                                                                         |");
+			term.echo("|                                                                                                               |");
+			term.echo("| > At least he washes it every day....                                                                         |");
+			term.echo("| > And with that I mean he wears it in the shower....                                                          |");
+			term.echo("| > While screaming to the sun...                                                                               |");
+			term.echo("| > Oh well, at least he likes it.                                                                              |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+		}
+		case("Database_Entry_01") {
+           term.push(function(command, term) {
+                if (command == 'Read_Entry') {
+                    term.echo('Reading Secret entry...');
+                } else if (command == 'ping') {
+                    term.echo('pong');
+                } else {
+                    term.echo("Please type 'Exit'");
+                }
+            }, {
+                prompt: '> ',
+                name: 'Error'});
+		}
+		case("livestream") {
+			$(function () {
+				window.onPlayerEvent = function (data) {
+					console.log("LOG: on PlayerEvent!");
+					data.forEach(function (event) {
+						console.log("LOG: foreach data");
+						if (event.event == "playerInit") {
+							console.log("LOG: playerInit!");
+							var player = $("#live_embed_player")[0];
+							player.playVideo();
+							player.mute();
+						}
+					});
+				}
+				console.log("LOG: test");
+
+				swfobject.embedSWF("http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf", "twitch_embed_player", "640", "400", "11", null, {
+					"eventsCallback": "onPlayerEvent",
+					"embed": 1,
+					"channel": "thatdanishguy",
+					"auto_play": "true"
+				}, {
+					"allowScriptAccess": "always",
+					"allowFullScreen": "true"
+				});
+			});
+		}
+		  
+		case('contact') {
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+			term.echo("|About:                                                                                                         |");
+			term.echo("|                                                                                                               |");
+			term.echo("|This program is created by nry_chan for fun. Please respect this program (it has feelings too)                 |");
+			term.echo("|This program's official name (and AI) is 'Samantha' Please be nice to her, since she can bite.                 |");
+			term.echo("|It runs mostly on Jquerry, JavaScript, HTML, Love, blood, the tears of danish's enemies and some other things  |");
+			term.echo("|                                                                                                               |");
+			term.echo("|Note from samantha:                                                                                            |");
+			term.echo("|                                                                                                               |");
+			term.echo("|Stop trying to look under my skirt for hidden secrets >///<                                                    |");
+			term.echo("|There are some hidden but these will be told in danish's chat, so stop it!                                     |");
+			term.echo("+---------------------------------------------------------------------------------------------------------------+");
+        } 
+		case('samantha') {
+		
+			term.echo("Go away.");
+		
+		}
+		
+		case('temmie') {
+			$( ".temmie" ).empty();
+			$( '.temmie').append( "<div id='temmie'><img src='http://orig00.deviantart.net/a3eb/f/2015/329/f/5/undertale___temmie_gif___265x255_by_justdwayne-d9hzhxa.gif'></img></div>");
+			var temmieFlakes = temmieFlakes + 1;
+			 if (temmieFlakes > 4) {
+				$( '.temmie').append( "<div id='temmie'><img src='http://orig00.deviantart.net/a3eb/f/2015/329/f/5/undertale___temmie_gif___265x255_by_justdwayne-d9hzhxa.gif'></img></div>");
+			 };
+		}
+		case('izu') {
+			term.echo("I hope you like this little message little sis <3   --Ordrel");
+			$( ".izu").empty();
+			$( ".izu").append( "<div id='temmie'><img src='https://media.giphy.com/media/YW3obh7zZ4Rj2/giphy.gif'></img></div>");
+		}
+		
+		default
+            term.echo("unknow command " + command);
+        
+    }, {
+        greetings: "+----------------------------+ <~Pizza~> | Welcome to the DOS Workshop! | <~Pizza~> +----------------------------+",
+        onBlur: function() {
+            // prevent loosing focus
+            return true;
+        }
+    });
+});
+
+</script>
+<div class='temmie'></div>
+<div class='izu'></div>
+<div class='twitch' id='twitch_embed_player'></div>
+</body>
