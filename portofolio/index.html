@@ -30,7 +30,11 @@
     <![endif]-->
 	
 	<!-- Before and after javascript -->
-	<script src="js/beforeafter.js"></script>
+	<script>	var divisor = document.getElementById("divisor"),
+		slider = document.getElementById("slider");
+		function moveDivisor() { 
+			divisor.style.width = slider.value+"%";
+		}</script>
 	
 </head>
 
