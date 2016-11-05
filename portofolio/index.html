@@ -28,16 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	
-	
-	<!-- Before and after javascript -->
-	<script>	var divisor = document.getElementById("divisor"),
-		slider = document.getElementById("slider");
-		function moveDivisor() { 
-			divisor.style.width = slider.value+"%";
-		}
-	</script>
+
 	
 </head>
 
@@ -139,12 +130,15 @@
 				<p> Here are a few old (web) projects of mine (with a fancy before and after slider) </p>
 				<p><a href="Martillo.dk" ></a></p>
 				<p>Descriptive text here</p>
-				<div id="comparison">
-					<figure>
-						<div id="divisor"></div>
-					</figure>
-					<input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
-				</div>
+					<div id="container1">
+						<img src="img/martilo1.png">
+						<img src="img/martilo2.png">
+					</div>
+					<script>
+					$(window).load(function() {
+						$("#container1").twentytwenty();
+					});
+				</script>
 			</div>
 		</div>
 	</section>
