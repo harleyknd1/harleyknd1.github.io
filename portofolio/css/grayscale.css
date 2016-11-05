@@ -328,14 +328,14 @@ body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 /*Website Before&After 1*/
-div#comparison1 { 
+div#comparison { 
   width: 60vw;
   height: 60vw;
   max-width: 600px;
   max-height: 600px;
   overflow: hidden; }
  /* Before image (Right) */
-div#comparison1 figure { 
+div#comparison figure { 
   background-image: url(https://pbs.twimg.com/profile_images/2478399688/6gyep59fumb340ima588_400x400.png); 
   background-size: cover;
   position: relative;
@@ -344,12 +344,12 @@ div#comparison1 figure {
   height: 100%;
   margin: 0; 
 }
-div#comparison1 figure > img { 
+div#comparison figure > img { 
   position: relative;
   width: 100%;
 }
  /* After image (left) */
-div#comparison1 figure div { 
+div#comparison figure div { 
   background-image: url(http://www.drodd.com/images15/2-23.jpg);
   background-size: cover;
   position: absolute;
