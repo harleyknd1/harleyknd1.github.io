@@ -7,6 +7,13 @@
   width: 100%;
 }
 
+@font-face {
+font-family: Gravity-Light;
+font-style: normal;
+font-weight: normal;
+src: url("font/Gravity-Light.otf") format("opentype");
+}
+
 .navbar-custom,body {
   background-color: #000;
 }
@@ -16,14 +23,14 @@
 }
 
 body {
-  font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Gravity-Light;
   color: #fff;
   webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
 .btn,.navbar-custom,h1,h2,h3,h4,h5,h6 {
   text-transform: uppercase;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Gravity-Light;
 }
 
 h1,h2,h3,h4,h5,h6 {
