@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<iframe src="picload.php"></iframe>
+
+<?php
+$dirname = "images/";
+$images = glob($dirname."*.png");
+
+foreach($images as $image) {
+    echo '<img src="'.$image.'" /><br />';
+}
+
+
+?>
+</body>
+</html>
