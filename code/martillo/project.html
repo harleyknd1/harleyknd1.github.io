@@ -9,10 +9,10 @@
     <link rel="shortcut icon" href="favicon.ico"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-    <script src="../js/jquery-1.7.1.min.js"></script>
-    <script src="../js/jquery.mousewheel-min.js"></script>
-    <script src="../js/jquery.terminal-min.js"></script>
-    <link href="../css/jquery.terminal.css" rel="stylesheet"/>
+    <script src="../martillo/js/jquery-1.7.1.min.js"></script>
+    <script src="../martillo/js/jquery.mousewheel-min.js"></script>
+    <script src="../martillo/js/jquery.terminal-min.js"></script>
+    <link href="../martillo/css/jquery.terminal.css" rel="stylesheet"/>
   </head>
 <body>
 
@@ -25,10 +25,11 @@ jQuery(document).ready(function($) {
 
 
     $('body').terminal(function(command, term, delay) {
-        switch (command)
-		case('help') 
+        switch (command){
+		case('help') :
             term.echo("available commands are about, nry_chan, store, orders, telephone_number, gallery, livestream and contact");
-        case('test')
+			break;
+        case('test'):
             term.push(function(command, term) {
                 if (command == 'help') {
                     term.echo('if you type ping it will display pong');
@@ -40,7 +41,8 @@ jQuery(document).ready(function($) {
             }, {
                 prompt: 'test> ',
                 name: 'test'});
-        case("about") {
+				break;
+        case("about"): {
 			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			function sleepThenAct(){ sleepFor(2000); console.log("hello js sleep !"); }
@@ -55,7 +57,9 @@ jQuery(document).ready(function($) {
 			term.echo("|                                                                                                               |");
 			setTimeout(function() { foobar_cont(el); }, 5000);
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
-        case('nry_chan') {
+		}
+		break;
+        case('nry_chan'): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("|About:                                                                                                         |");
 			term.echo("|                                                                                                               |");
@@ -69,7 +73,8 @@ jQuery(document).ready(function($) {
 			term.echo("|                                                                                                               |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
         } 
-		case("store") {
+		break;
+		case("store"): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("|The store is available here:                                                                                   |");
 			term.echo("|http://bit.ly/MartilloStore                                                                                    |");
@@ -78,7 +83,8 @@ jQuery(document).ready(function($) {
 			term.echo("|                                                                                                               |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
         }
-		case("orders") {
+		break;
+		case("orders"): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("| _____       _                               _____ _               _                                           |");
 			term.echo("||     |___ _| |___ ___ ___    ___ ___ ___   |     | |___ ___ ___ _| |                                          |");
@@ -87,7 +93,8 @@ jQuery(document).ready(function($) {
 			term.echo("|                                                                                                               |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
         }
-		case("telephone_number") {
+		break;
+		case("telephone_number"): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("| > Texting That danish guy with your current location Please wait.....                                         |");
 			term.echo("| > Could not detect current location....                                                                       |");
@@ -96,7 +103,8 @@ jQuery(document).ready(function($) {
 			term.echo("| > Ban sucsessfull. https://i1.sndcdn.com/artworks-000130132034-i9wr73-t500x500.jpg                            |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
         }
-		case("gallery") {
+		break;
+		case("gallery"): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("| > Did you really think this would've worked?                                                                  |");
 			term.echo("| > I mean, you could be as cool as nry_chan if you wore his outfit everyday... he only takes it off if he...   |");
@@ -108,7 +116,8 @@ jQuery(document).ready(function($) {
 			term.echo("| > Oh well, at least he likes it.                                                                              |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 		}
-		case("Database_Entry_01") {
+		break;
+		case("Database_Entry_01"): {
            term.push(function(command, term) {
                 if (command == 'Read_Entry') {
                     term.echo('Reading Secret entry...');
@@ -121,7 +130,8 @@ jQuery(document).ready(function($) {
                 prompt: '> ',
                 name: 'Error'});
 		}
-		case("livestream") {
+		break;
+		case("livestream"): {
 			$(function () {
 				window.onPlayerEvent = function (data) {
 					console.log("LOG: on PlayerEvent!");
@@ -148,8 +158,9 @@ jQuery(document).ready(function($) {
 				});
 			});
 		}
+		break;
 		  
-		case('contact') {
+		case('contact'): {
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
 			term.echo("|About:                                                                                                         |");
 			term.echo("|                                                                                                               |");
@@ -163,13 +174,14 @@ jQuery(document).ready(function($) {
 			term.echo("|There are some hidden but these will be told in danish's chat, so stop it!                                     |");
 			term.echo("+---------------------------------------------------------------------------------------------------------------+");
         } 
-		case('samantha') {
+		break;
+		case('samantha'): {
 		
 			term.echo("Go away.");
 		
 		}
-		
-		case('temmie') {
+		break;
+		case('temmie'): {
 			$( ".temmie" ).empty();
 			$( '.temmie').append( "<div id='temmie'><img src='http://orig00.deviantart.net/a3eb/f/2015/329/f/5/undertale___temmie_gif___265x255_by_justdwayne-d9hzhxa.gif'></img></div>");
 			var temmieFlakes = temmieFlakes + 1;
@@ -177,14 +189,17 @@ jQuery(document).ready(function($) {
 				$( '.temmie').append( "<div id='temmie'><img src='http://orig00.deviantart.net/a3eb/f/2015/329/f/5/undertale___temmie_gif___265x255_by_justdwayne-d9hzhxa.gif'></img></div>");
 			 };
 		}
-		case('izu') {
+		case('izu'): {
 			term.echo("I hope you like this little message little sis <3   --Ordrel");
 			$( ".izu").empty();
 			$( ".izu").append( "<div id='temmie'><img src='https://media.giphy.com/media/YW3obh7zZ4Rj2/giphy.gif'></img></div>");
 		}
-		
-		default
+		break;
+		default: {
             term.echo("unknow command " + command);
+		}
+		break;
+	}
         
     }, {
         greetings: "+----------------------------+ <~Pizza~> | Welcome to the DOS Workshop! | <~Pizza~> +----------------------------+",
